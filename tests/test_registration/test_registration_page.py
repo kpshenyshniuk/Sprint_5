@@ -8,8 +8,8 @@ from tests.locators import Locators
 
 class TestRegistration:
     def test_registration(self, driver):
-        driver.get('https://stellarburgers.nomoreparties.site/register')
-        WebDriverWait(driver, 10).until(expected_conditions.url_to_be("https://stellarburgers.nomoreparties.site/register"))
+        driver.get(Locators.link_registration_page)
+        WebDriverWait(driver, 10).until(expected_conditions.url_to_be(Locators.link_registration_page))
         name_field = driver.find_element(By.XPATH, Locators.name_field_registration_page)
         name_field.send_keys(CommonData.random_name)
         email_field = driver.find_element(By.XPATH, Locators.email_field_registration_page)
@@ -21,12 +21,12 @@ class TestRegistration:
         assert password_field.get_attribute('value') == CommonData.password
         WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable((By.XPATH, Locators.register_button_registration_page)))
         driver.find_element(By.XPATH, Locators.register_button_registration_page).click()
-        WebDriverWait(driver, 10).until(expected_conditions.url_to_be("https://stellarburgers.nomoreparties.site/login"))
-        assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
+        WebDriverWait(driver, 10).until(expected_conditions.url_to_be(Locators.link_login_page))
+        assert driver.current_url == Locators.link_login_page
 
     def test_error_when_register_with_less_6_symbols_password(self, driver):
-        driver.get('https://stellarburgers.nomoreparties.site/register')
-        WebDriverWait(driver, 10).until(expected_conditions.url_to_be("https://stellarburgers.nomoreparties.site/register"))
+        driver.get(Locators.link_registration_page)
+        WebDriverWait(driver, 10).until(expected_conditions.url_to_be(Locators.link_registration_page))
         name_field = driver.find_element(By.XPATH, Locators.name_field_registration_page)
         name_field.send_keys(CommonData.random_name)
         email_field = driver.find_element(By.XPATH, Locators.email_field_registration_page)

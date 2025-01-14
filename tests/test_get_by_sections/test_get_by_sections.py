@@ -69,7 +69,7 @@ class TestGetBySections:
         assert abs(new_scroll_position - expected_scroll_position) < 5
 
     def test_scroll_to_bread_from_fillings(self, driver):
-        driver.get('https://stellarburgers.nomoreparties.site')
+        driver.get(Locators.link_main_page)
 
         # Дождаться загрузки страницы
         WebDriverWait(driver, 10).until(

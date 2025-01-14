@@ -27,3 +27,9 @@ class Locators:
     button_section_sauce = '//span[text()="Соусы"]' # Локатор кнопки раздела Соусы
     button_section_fillings = '//span[text()="Начинки"]' # Локатор кнопки раздела Начинки
     div_with_ingredients_and_scroll = "div.BurgerIngredients_ingredients__menuContainer__Xu3Mo"
+    link_login_page = 'https://stellarburgers.nomoreparties.site/login' # Линка на  страницу с авторизацией пользователя
+    link_profile_page = 'https://stellarburgers.nomoreparties.site/account' # Линка на траницу с Личным кабинетом пользователя
+    full_link_profile_page = 'https://stellarburgers.nomoreparties.site/account/profile' # линка на страницу с личным кабинетом полная линка
+    link_main_page = "https://stellarburgers.nomoreparties.site/" # линка на главную страницу
+    link_forgot_password_page = 'https://stellarburgers.nomoreparties.site/forgot-password' # Линка на страницу с восстановление пароля
+    link_registration_page ='https://stellarburgers.nomoreparties.site/register' # линка на страницу с регистрацией
