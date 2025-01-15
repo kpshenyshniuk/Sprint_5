@@ -4,6 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from confest import driver
 from tests.locators import Locators
+from tests.links import Links
 
 
 class TestGetBySections:
@@ -69,7 +70,7 @@ class TestGetBySections:
         assert abs(new_scroll_position - expected_scroll_position) < 5
 
     def test_scroll_to_bread_from_fillings(self, driver):
-        driver.get(Locators.link_main_page)
+        driver.get(Links.base_url)
 
         # Дождаться загрузки страницы
         WebDriverWait(driver, 10).until(
